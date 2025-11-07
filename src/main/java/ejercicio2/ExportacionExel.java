@@ -4,7 +4,9 @@ public class ExportacionExel extends Documento{
     public ExportacionExel(String archivoTxt){
         super(archivoTxt);
     }
-    public void exportarExel(){
+    @Override
+    public void exportacion(){
         System.out.println("Archivo exportado en formato Exel.");
+        System.out.println("Archivo exportado: " + getArchivoTxt());
     }
 }

@@ -1,7 +1,7 @@
 package ejercicio2;
 
 public class Documento {
-    public String archivoTxt;
+    private String archivoTxt;
     public Documento(String archivoTxt){
         this.archivoTxt = archivoTxt;
     }
@@ -10,7 +10,19 @@ public class Documento {
             throw new IllegalArgumentException("No puede ser Null");
         }
     }
-    public void exportacionPDF(){
+
+    public String getArchivoTxt() {
+        return archivoTxt;
+    }
+
+    public void setArchivoTxt(String archivoTxt) {
+        if (!archivoTxt.equals(this.archivoTxt)){
+           this.archivoTxt = archivoTxt;
+        }
+    }
+
+    public void exportacion(){
         System.out.println("Archivo exportado en formato PDF.");
+        System.out.println("Archivo exportado: " + getArchivoTxt());
     }
 }
